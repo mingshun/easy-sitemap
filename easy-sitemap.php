@@ -94,7 +94,7 @@ class EasySitemap {
   }
 
   function output_sitemap() {
-    header('Content-Type: text/xml; Charset=UTF-8');
+    header('Content-Type: text/xml; charset=UTF-8');
     echo $this->generate_sitemap();
   }
 }
