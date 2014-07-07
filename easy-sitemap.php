@@ -57,8 +57,8 @@ class EasySitemap {
     foreach ($posts as $post) {
       $url = $urlset->appendChild($dom->createElement('url'));
 
-      $locNode = $url->appendChild($dom->createElement('loc'));
-      $locNode->appendChild($dom->createTextNode(get_permalink($post->ID)));
+      $loc = $url->appendChild($dom->createElement('loc'));
+      $loc->appendChild($dom->createTextNode(get_permalink($post->ID)));
 
       $lastmod = $url->appendChild($dom->createElement('lastmod'));
       $date = DateTime::createFromFormat('Y-m-d H:i:s', $post->post_modified_gmt);
